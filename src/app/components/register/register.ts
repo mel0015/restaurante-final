@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UsuariosService } from '../../services/usuarios';
 import { Router } from '@angular/router';
-
+import { RouterModule } from '@angular/router';   // para cuenta
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule], //
   templateUrl: './register.html',
   styleUrls: ['./register.scss']
 })

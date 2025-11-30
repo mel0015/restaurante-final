@@ -13,6 +13,7 @@
         <th>Mensaje</th>
         <th>Teléfono</th>
         <th>Fecha</th>
+        <th>Hora</th>
         <th>Usuario</th>
       </tr>
     </thead>
@@ -22,8 +23,9 @@
         <td>{{r.nombre}}</td>
         <td>{{r.personas}}</td>
         <td>{{r.mensaje || '-'}}</td>
-        <td>{{r.telefono || '-'}}</td>
-        <td>{{r.fecha | date:'short'}}</td>
+        <td>{{r.contacto?.telefono || '-' }}</td>
+        <td>{{r.fecha }}</td>
+        <td>{{ r.hora }}</td>
         <td>{{r.usuario || '-'}}</td>
       </tr>
     </tbody>

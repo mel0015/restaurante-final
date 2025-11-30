@@ -34,11 +34,11 @@ export class ReservacionComponent {
     private usuariosService: UsuariosService
   ) {
     const hoy = new Date();
-    this.fechaMinima = hoy.toISOString().split('T')[0];
+    this.fechaMinima = hoy.toISOString().slice(0, 16);
 
     const limite = new Date();
     limite.setMonth(limite.getMonth() + 6);
-    this.fechaMaxima = limite.toISOString().split('T')[0];
+    this.fechaMaxima = limite.toISOString().slice(0, 10);
   }
 
  onSubmit(form: NgForm) {
